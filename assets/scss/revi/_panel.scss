@@ -1,0 +1,15 @@
+#codeigniter_profiler{
+    z-index: 99999999999999999;
+    position: relative;
+}
+
+.description{
+    width: 500px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.description-thead{
+    width: 20rem !important;
+}

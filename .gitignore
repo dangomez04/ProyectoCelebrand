@@ -1,0 +1,49 @@
+# FILES
+logs/
+uploads/
+
+# GULP
+node_modules/
+gulpfile.js
+package-lock.json
+
+# COMPOSER
+composer.lock
+/vendor/
+
+
+# CODEIGNITER CONFIG FILES
+.htaccess
+application/config/config.php
+application/config/constants.php
+application/config/database.php
+
+
+# CODEIGNITER
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+
+.DS_Store
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project

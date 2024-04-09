@@ -1,0 +1,21 @@
+.revi-app-bg-img { background:url("https://www.tuotrodiario.com/imagenes/noticias/2020041086848/app-suscripcion-gratis/0-264-88/app-suscripcion-t.jpg");}
+.revi-app-img:hover{
+    cursor:pointer;
+    filter:blur(2px);
+}
+.revi-app-img{
+    filter:none;
+    width:100%;
+}
+.user-app-card:hover{
+    transform:scaleY(1.10) scaleX(1.10);
+    box-shadow:1px 1px 8px 1px #777777;
+}
+.mini-revi-logo{
+    width: 2rem;
+}
+.app-name{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

@@ -1,0 +1,30 @@
+.bouncing_group{
+    display: inline-block;
+}
+.bouncing_point{
+    animation: bounce 1.5s infinite;
+    display: inline-block;
+    height:1.5rem;
+    width:1.5rem;
+    background-color: #495057;
+    border-radius:50%;
+}
+
+.bouncing_point:first-child{
+    animation-delay:0s;
+}
+.bouncing_point:nth-child(2){
+    animation-delay:0.2s;
+}
+.bouncing_point:nth-child(3){
+    animation-delay:0.4s;
+}
+
+@keyframes bounce {
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

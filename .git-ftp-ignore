@@ -1,0 +1,50 @@
+# LOCALHOST
+**/*-localhost*
+**/*-real*
+**/*-dev*
+*-localhost*
+*-real*
+*-dev*
+
+# FILES & UPLOADS
+logs/*
+uploads/*
+
+# GIT 
+.git*
+
+# GULP
+gulpfile.js
+package.json
+package-lock.json
+node_modules/
+
+# Codeigniter
+application/cache/*
+application/logs/*
+
+application/config/database.php
+application/config/config.php
+application/config/constants.php
+
+# HTACCESS
+.htaccess
+robots.txt
+
+# COMPOSER
+/vendor/
+
+
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+.vscode/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
