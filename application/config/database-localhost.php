@@ -82,7 +82,7 @@ $db['default'] = array(
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'revi_app_database',
+	'database' => 'prueba',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
