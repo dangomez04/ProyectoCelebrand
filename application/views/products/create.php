@@ -20,10 +20,7 @@
                             <label>Product name</label>
                             <input type="text" required class="form-control" placeholder="Ej: Pala de acero" value="<?= $this->session->flashdata('name') ?>" name="name">
                         </div>
-                        <div class="form-group col-12 col-md-6 mt-xs-2">
-                            <label>Product brand</label>
-                            <input type="text" required class="form-control" placeholder="Ej: Revis Company" value="<?= $this->session->flashdata('brand') ?>" name="brand">
-                        </div>
+                       
                     </div>
 
                     <div class="row mt-3">
@@ -35,8 +32,8 @@
                                         Select an option
                                     </option>
                                     <?php foreach ($categories as $category) : ?>
-                                        <option value="{{$category->id_category}}" <?= $category->id == $this->session->flashdata('id_category') ? 'selected' : '' ?>>
-                                            {{$category->name}}
+                                        <option value="<?=$category->id_category?>" <?= $category->id_category == $this->session->flashdata('id_category') ? 'selected' : '' ?>>
+                                            <?=$category->name?>
                                         </option>
                                     <?php endforeach ?>
                                 </select>

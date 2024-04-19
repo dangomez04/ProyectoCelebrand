@@ -17,4 +17,12 @@ class Category_model extends CI_Model {
         return $this->db->get($this->table)->result();
     }
 
+
+    public function create($data){
+        $this->db->insert('categories', $data);
+
+    }
+
+    
+
 }

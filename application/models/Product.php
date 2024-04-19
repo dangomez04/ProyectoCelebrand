@@ -52,12 +52,27 @@ class Product extends CI_Model {
 
             $row = $query->row();
             return $row->name;
-            
+
         } else {
 
 
             return 'Categoría no encontrada';
         }
+    }
+
+
+    function create($data){
+
+        $insert_data = array(
+            'name' => $data[0],
+            'id_category' => $data[1],
+            'price' => $data[2],
+            'description' => $data[3]
+        );
+
+            $this->db->insert('products', $insert_data);
+    
+        
     }
 
 }

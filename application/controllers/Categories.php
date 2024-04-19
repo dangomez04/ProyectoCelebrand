@@ -35,7 +35,7 @@ class Categories extends CI_Controller
 
 
         $this->view_data["views"] = array("categories/index");
-        
+
         $this->view_data["categories"] = $categories; 
 
 		$this->load->view('template', $this->view_data);
@@ -45,6 +45,16 @@ class Categories extends CI_Controller
     public function new(){
         $this->view_data["views"] = array("categories/create");
 		$this->load->view('template', $this->view_data);
+    }
+
+    public function create(){
+        $this->load->model('Category_model');
+
+        $name = $this->input->post('name');
+        $this->Category_model->create(['name' => $name]);
+        redirect('categories');
+
+
     }
 
 

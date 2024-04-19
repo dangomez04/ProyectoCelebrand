@@ -58,7 +58,10 @@ $route['(es|en)/(.+)$'] = "$2";
 $route['(es|en)/categories'] = 'Home';
 
 $route['categories'] = 'Categories';
-$route['categories/new'] = 'Categories/new';
+$route['categories/create'] = 'Categories/create';
+
 $route['products'] = 'Products';
+$route['products/create'] = 'Products/create';
+
 
 
