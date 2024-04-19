@@ -1,7 +1,9 @@
 <?php
+use application\models\Product;
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Products extends CI_Controller
 {
 
 	public function __construct(array $params = array())
@@ -22,10 +24,30 @@ class Home extends CI_Controller
                        'language' => $this->language,
             'colour_mode' => $this->colour_mode,
         );
+
+
     }
 	public function index()
 	{
-		$this->view_data["views"] = array("panel/home");
+
+        $this->load->model('Product');
+        $products = $this->Product->get_all();
+
+
+        $this->view_data["views"] = array("products/index");
+        
+        $this->view_data["products"] = $products; 
+
 		$this->load->view('template', $this->view_data);
 	}
+
+
+    public function new(){
+        $this->view_data["views"] = array("products/create");
+		$this->load->view('template', $this->view_data);
+    }
+
+
+
+
 }

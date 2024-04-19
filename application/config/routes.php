@@ -55,3 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['(es|en)'] = "home";
 $route['(es|en)/(.+)$'] = "$2";
+$route['(es|en)/categories'] = 'Home';
+
+$route['categories'] = 'Categories';
+$route['categories/new'] = 'Categories/new';
+$route['products'] = 'Products';
+
+

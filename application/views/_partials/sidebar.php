@@ -17,14 +17,14 @@
                 </li>
 
                 <li>
-                    <a href="<?= APP_URL . "$language/categories" ?>" class="waves-effect">
+                    <a href="<?= APP_URL . "categories" ?>" class="waves-effect">
                         <i class='bx bxs-customize'></i>
                         <span><?= lang('Categories') ?></span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?= APP_URL . "$language/products" ?>" class="waves-effect">
+                    <a href="<?= APP_URL . "products" ?>" class="waves-effect">
                         <i class='bx bxs-package'></i>
                         <span><?= lang('Products') ?></span>
                     </a>

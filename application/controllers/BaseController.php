@@ -15,7 +15,6 @@ class BaseController extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->library(array('slice'));
         $this->load->helper('language');
 
         $this->language = $this->uri->segment(1);
@@ -43,9 +42,9 @@ class BaseController extends CI_Controller
         );
     }
 
-    public function logout()
+/*     public function logout()
     {
         Auth::logout();
-        redirect(ACCOUNTS_URL . $this->language);
-    }
+        redirect(APP_URL . $this->language);
+    } */
 }
