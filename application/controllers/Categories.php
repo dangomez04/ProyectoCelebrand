@@ -61,10 +61,47 @@ class Categories extends CI_Controller
 
     public function delete($id_category){
         $this->load->model('Category_model');
-        $this->Category_model->delete_category($id_category);
-        redirect('categories');
+         $this->Category_model->delete_category($id_category);
+        redirect('categories');            
+        
+    }
+
+
+    public function edit($id_category){
+        $this->load->model('Category_model');
+
+        $category_info = $this->Category_model->search_category($id_category);
+
+        $data['category_info'] = $category_info;
+        $this->load->view('categories/edit', $data);
+
+
 
     }
+
+
+    public function update(){
+        $this->load->model('Category_model');
+
+        $id_category = $this->input->post('id_category');
+        $name = $this->input->post('name');
+
+
+        $update_data = array(
+            'name' => $name,
+            'id_category' => $id_category
+
+        );  
+
+        $this->Category_model->update_category($update_data);
+        redirect('categories');
+
+
+    }
+
+
+
+
 
 
 

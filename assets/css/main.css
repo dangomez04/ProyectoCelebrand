@@ -1441,3 +1441,8 @@ A VERTICAL event
 body[data-layout-mode="dark"] .bg-dark {
     background-color: #3d4240 !important;
 }
+
+
+form#editproduct_form .options{
+    margin-top: 5vw;
+}

@@ -31,6 +31,24 @@ class Category_model extends CI_Model {
         
     }
 
+
+
+    public function search_category($id_category){
+        $this->db->where('id_category', $id_category);
+
+        return $this->db->get($this->table)->row();
+
+    
+    }
+
+
+    public function update_category($data){
+
+        $this->db->where('id_category', $data['id_category']);
+        $this->db->update($this->table, $data);
+        
+    }
+
     
 
 }

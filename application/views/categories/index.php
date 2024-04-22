@@ -25,7 +25,7 @@
                                 <td><?= $category->id_category ?></td>
                                 <td><?= $category->name ?></td>
                                 <td>
-                                    <a title="Edit" href="<?= APP_URL . "categories/edit/{$category->id_category}" ?>" class="btn btn-primary btn-sm">
+                                    <a title="Edit" href="<?= APP_URL . 'categories/edit/' .$category->id_category ?>" class="btn btn-primary btn-sm">
                                         <i class='bx bxs-edit-alt'></i>
                                     </a>
                                     <a title="Delete" href="<?= APP_URL . 'categories/delete/' .$category->id_category ?>" class="btn btn-danger btn-sm">
@@ -36,6 +36,14 @@
                                 </td>
                             </tr>
                         <?php endforeach ?>
+
+                        <?php if (isset($error_message)): ?>
+                         <div class="alert alert-danger" role="alert">
+                             <?php echo $error_message; ?>
+                         </div>
+                            <?php endif; ?>
+
+
                     </tbody>
                 </table>
             </div>
