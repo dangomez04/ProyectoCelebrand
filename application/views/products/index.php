@@ -32,7 +32,7 @@
                                 <td><?=$product->price?></td>
                                 <td><?=$product->category_name?></td>
                                 <td>
-                                    <a title="Edit" href="<?= APP_URL . "{products/edit/{$product->id_product}" ?>" class="btn btn-primary">
+                                    <a title="Edit" href="<?= APP_URL . "products/edit/$product->id_product" ?>" class="btn btn-primary">
                                         <i class='bx bxs-edit-alt'></i>
                                     </a>
                                     <a title="Delete" href="<?= APP_URL . 'products/delete/' .$product->id_product ?>" class="btn btn-danger">

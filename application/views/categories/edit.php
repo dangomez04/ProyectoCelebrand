@@ -25,7 +25,7 @@
                     </div>
 
                         <br>
-                    <input type="submit" value="Save category">
+                    <input type="submit" value="Save category" class="btn btn-primary">
                     <a href="<?= APP_URL . "categories" ?>" class="btn btn-secondary">
                     Cancel
                 </a>

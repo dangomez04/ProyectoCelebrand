@@ -81,4 +81,20 @@ class Product extends CI_Model {
         
     }
 
+    public function search_product($id_product){
+        $this->db->where('id_product', $id_product);
+
+        return $this->db->get($this->table)->row();
+
+    }
+
+
+   
+    public function update_product($data){
+
+        $this->db->where('id_product', $data['id_product']);
+        $this->db->update($this->table, $data);
+        
+    }
+
 }

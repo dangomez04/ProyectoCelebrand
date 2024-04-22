@@ -1,82 +1,78 @@
-@extends('template')
+<!-- @extends('template')
 
-@section('topCustomCSS')
+@section('topCustomCSS') -->
 <!-- dropzone css -->
 <link href="<?= APP_URL ?>assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
-@endsection
+<!-- @endsection
 
-@section('content')
+@section('content') -->
 <div class="row justify-content-center">
     <div class="col-xxl-8 col-lg-10 col-md-10 col-12">
 
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title"><?= lang('Edit Product') ?></h4>
+                <h4 class="card-title">Edit product</h4>
                 <hr>
 
-                <form class="form-horizontal mt-4" id="editproduct_form" method="post">
+                <form class="form-horizontal mt-4" id="editproduct_form" method="post"  action="<?= APP_URL. 'products/update'?>">
                     <input type="hidden" name="id_product" value="<?= $product->id_product ?>">
                     <div class="row">
                         <div class="form-group col-12 col-md-6">
-                            <label><?= lang("Product Name") ?></label>
+                            <label>Product name</label>
                             <input type="text" required class="form-control" value="<?= $product->name ?>" name="name">
                         </div>
-                        <div class="form-group col-12 col-md-6 mt-xs-2">
-                            <label><?= lang("Product Brand") ?></label>
-                            <input type="text" required class="form-control" value="<?= $product->brand ?>" name="brand">
-                        </div>
+                        
                     </div>
+                    <br>
+
 
                     <div class="row mt-3">
                         <div class="form-group col-12 col-md-6">
                             <div>
-                                <label><?= lang("Category") ?></label>
+                                <label>Category</label>
                                 <select class="form-control form-select" required name="id_category">
                                     <option>
-                                        <?= lang('Select an option') ?>
+                                        Select an option
                                     </option>
                                     <?php foreach ($categories as $category) : ?>
-                                        <option value="{{$category->id_category}}" <?= $category->id_category == $product->id_category ? 'selected' : '' ?>>
-                                            {{$category->name}}
+                                        <option value="<?=$category->id_category ?>" <?= $category->id_category == $product->id_category ? 'selected' : '' ?>>
+                                            <?=$category->name?>
                                         </option>
                                     <?php endforeach ?>
                                 </select>
 
                             </div>
+                            <br>
                             <div class="mt-1">
-                                <label><?= lang("Price") ?></label>
+                                <label>Price</label>
                                 <input type="number" required class="form-control" step="0.01" data-v-min="0.1" value="<?= $product->price ?>" name="price">
                             </div>
                         </div>
+                        <br>
+
                         <div class="form-group col-12 col-md-6">
-                            <label><?= lang("Product Description") ?></label>
+                            <label>Product Description</label><br>
                             <textarea class="form-control" rows="5" name="description"><?= $product->description ?></textarea>
                         </div>
-                    </div>
+                    </div>  
+                    <br>
 
-                    <hr>
-                    <h4 class="card-title mb-3">Product Images</h4>
-
-                    <div id="my-dropzone" class="dropzone"></div>
+                    <input type="submit" value="Save product" class="btn btn-primary">
+                    <a href="<?= APP_URL . "categories" ?>" class="btn btn-secondary">
+                    Cancel
+                     </a>
                 </form>
             </div>
-            <footer class="card-footer text-end">
-                <button type="submit" id="submit_editproduct_form" class="btn btn-primary">
-                    <?= lang('Save product') ?>
-                </button>
-                <a href="<?= APP_URL . "{$language}/products" ?>" class="btn btn-secondary">
-                    <?= lang('Cancel') ?>
-                </a>
-            </footer>
+           
         </div>
     </div>
 </div>
-@endsection
+<!-- @endsection
 
-@section('customJS')
+@section('customJS') -->
 <!-- dropzone plugin -->
 <script src="<?= APP_URL ?>assets/libs/dropzone/min/dropzone.min.js"></script>
-<script>
+<!-- <script>
     $("body").on('click', '#submit_editproduct_form', function(e) {
         e.preventDefault();
         checkForm('editproduct_form', function() {
@@ -88,7 +84,7 @@
 
     var myDropzone = "";
     $("#my-dropzone").dropzone({
-        url: '<?= APP_URL . "{$language}/products/updateProductImage" ?>',
+        url: '<?= APP_URL . "products/updateProductImage" ?>',
         maxFilesize: 10,
         maxFiles: 1,
         autoProcessQueue: false,
@@ -102,5 +98,5 @@
             myDropzone = this;
         }
     });
-</script>
-@endsection
+</script> -->
+<!-- @endsection -->

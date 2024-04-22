@@ -69,15 +69,16 @@ class Categories extends CI_Controller
 
     public function edit($id_category){
         $this->load->model('Category_model');
-
+    
         $category_info = $this->Category_model->search_category($id_category);
-
-        $data['category_info'] = $category_info;
-        $this->load->view('categories/edit', $data);
-
-
-
+    
+      
+    
+        $this->view_data["views"] = array("categories/edit");
+        $this->view_data["category_info"] = $category_info; 
+        $this->load->view('template', $this->view_data);
     }
+    
 
 
     public function update(){
@@ -95,7 +96,6 @@ class Categories extends CI_Controller
 
         $this->Category_model->update_category($update_data);
         redirect('categories');
-
 
     }
 

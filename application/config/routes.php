@@ -65,6 +65,8 @@ $route['categories/delete/(:num)'] = 'Categories/delete/$1';
 
 $route['products'] = 'Products';
 $route['products/create'] = 'Products/create';
+$route['products/edit/(:num)'] = 'Products/edit/$1';
+$route['products/update'] = 'Products/update';
 $route['products/delete/(:num)'] = 'Products/delete/$1';
 
 

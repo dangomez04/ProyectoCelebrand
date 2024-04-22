@@ -82,6 +82,54 @@ class Products extends CI_Controller
     }
 
 
+    public function edit($id_product){
+            $this->load->model('Product');
+            $this->load->model('Category_model');
+
+         
+
+
+            $product_info = $this->Product->search_product($id_product);
+
+
+            $this->view_data["views"] = array("products/edit");
+            $this->view_data["product"] = $product_info; 
+            $this->view_data["categories"] = $this->Category_model->get_all();; 
+
+            $this->load->view('template', $this->view_data);
+
+
+
+
+    }
+
+    
+    public function update(){
+        $this->load->model('Product');
+
+        $id_product = $this->input->post('id_product');
+        $name = $this->input->post('name');
+        $category = $this->input->post('id_category');
+        $price = $this->input->post('price');
+        $description = $this->input->post('description');
+
+        $update_data = array(
+            'id_product' => $id_product,
+            'name' => $name,
+            'id_category' => $category,
+            'price' => $price, 
+            'description' => $description
+
+        );  
+
+        $this->Product->update_product($update_data);
+        redirect('products');
+
+    }
+
+
+
+
 
 
 }
