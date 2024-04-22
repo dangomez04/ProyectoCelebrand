@@ -25,18 +25,19 @@
                                 <td><?= $category->id_category ?></td>
                                 <td><?= $category->name ?></td>
                                 <td>
-                                    <a href="<?= APP_URL . "categories/edit/{$category->id_category}" ?>" class="btn btn-primary btn-sm">
+                                    <a title="Edit" href="<?= APP_URL . "categories/edit/{$category->id_category}" ?>" class="btn btn-primary btn-sm">
                                         <i class='bx bxs-edit-alt'></i>
                                     </a>
-                                    <a href="<?= APP_URL . "categories/delete/{$category->id_category}" ?>" class="btn btn-danger btn-sm">
-                                        <i class='bx bxs-trash'></i>
+                                    <a title="Delete" href="<?= APP_URL . 'categories/delete/' .$category->id_category ?>" class="btn btn-danger btn-sm">
+                                     <i class='bx bxs-trash'></i>
                                     </a>
+
+
                                 </td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>

@@ -23,6 +23,14 @@ class Category_model extends CI_Model {
 
     }
 
+
+    public function delete_category($id_category){
+        $this->db->where('id_category', $id_category);
+
+        $this->db->delete('categories');
+        
+    }
+
     
 
 }

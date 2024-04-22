@@ -73,5 +73,15 @@ class Products extends CI_Controller
 
 
 
+    
+    public function delete($id_product){
+        $this->load->model('Product');
+        $this->Product->delete_product($id_product);
+        redirect('products');
+
+    }
+
+
+
 
 }

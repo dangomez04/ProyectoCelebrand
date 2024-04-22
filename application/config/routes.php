@@ -59,9 +59,10 @@ $route['(es|en)/categories'] = 'Home';
 
 $route['categories'] = 'Categories';
 $route['categories/create'] = 'Categories/create';
+$route['categories/delete/(:num)'] = 'Categories/delete/$1';
 
 $route['products'] = 'Products';
 $route['products/create'] = 'Products/create';
-
+$route['products/delete/(:num)'] = 'Products/delete/$1';
 
 

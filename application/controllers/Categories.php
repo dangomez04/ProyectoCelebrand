@@ -59,5 +59,14 @@ class Categories extends CI_Controller
 
 
 
+    public function delete($id_category){
+        $this->load->model('Category_model');
+        $this->Category_model->delete_category($id_category);
+        redirect('categories');
+
+    }
+
+
+
 
 }

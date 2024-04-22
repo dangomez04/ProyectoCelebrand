@@ -27,7 +27,6 @@ class Product extends CI_Model {
     {
         $products = $this->db->get($this->table)->result();
 
-        // Cargar nombres de categorías para cada producto
         foreach ($products as $product) {
             $product->category_name = $this->load_category_name($product->id_category);
         }
@@ -72,6 +71,13 @@ class Product extends CI_Model {
 
             $this->db->insert('products', $insert_data);
     
+        
+    }
+
+    public function delete_product($id_product){
+        $this->db->where('id_product', $id_product);
+
+        $this->db->delete('products');
         
     }
 

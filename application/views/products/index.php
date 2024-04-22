@@ -32,10 +32,10 @@
                                 <td><?=$product->price?></td>
                                 <td><?=$product->category_name?></td>
                                 <td>
-                                    <a title="<?= lang('Edit') ?>" href="<?= APP_URL . "{products/edit/{$product->id_product}" ?>" class="btn btn-primary">
+                                    <a title="Edit" href="<?= APP_URL . "{products/edit/{$product->id_product}" ?>" class="btn btn-primary">
                                         <i class='bx bxs-edit-alt'></i>
                                     </a>
-                                    <a title="<?= lang('Delete') ?>" class="btn btn-danger">
+                                    <a title="Delete" href="<?= APP_URL . 'products/delete/' .$product->id_product ?>" class="btn btn-danger">
                                         <i class='bx bxs-trash'></i>
                                     </a>
                                 </td>
