@@ -39,8 +39,15 @@ class Category extends Model
 
     }
 
-    public static function update_category($data){
-        $category = Category::find();
+    public static function update_category($id_category, $name){
+        
+        $category = Self::find($id_category);
+        if($category){
+            
+            $category->update(['name' => $name]);
+
+        }
+
     }
 
 

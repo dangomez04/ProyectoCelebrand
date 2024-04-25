@@ -87,7 +87,11 @@ class Categories extends CI_Controller
 
 
     public function update(){
+        $id_category = $this->input->post('id_category');
+        $name = $this->input->post('name');
         
+        Category::update_category($id_category, $name);
+        redirect("categories");
     }
 
 

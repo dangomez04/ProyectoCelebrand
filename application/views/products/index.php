@@ -30,7 +30,7 @@
                                     </div>
                                 </td>
                                 <td><?=$product->price?></td>
-                                <td><?=$product->category_name?></td>
+                                <td><?=$product->category->name?></td>
                                 <td>
                                     <a title="Edit" href="<?= APP_URL . "products/edit/$product->id_product" ?>" class="btn btn-primary">
                                         <i class='bx bxs-edit-alt'></i>
