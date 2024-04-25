@@ -17,10 +17,7 @@ class BaseController extends CI_Controller
 
         $this->load->helper('language');
 
-        $this->language = $this->uri->segment(1);
-        if (!in_array($this->language, $this->panel_languages)) {
-            $this->language = 'en';
-        }
+       
 
         $this->colour_mode = isset($this->session->colour_mode) ? $this->session->colour_mode : 'light';
         $this->session->set_userdata('colour_mode', $this->colour_mode);
@@ -42,9 +39,8 @@ class BaseController extends CI_Controller
         );
     }
 
-/*     public function logout()
+     public function logout()
     {
-        Auth::logout();
-        redirect(APP_URL . $this->language);
-    } */
+        
+    } 
 }

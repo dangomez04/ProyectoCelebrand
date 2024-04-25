@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+require_once APPPATH . 'controllers/BaseController.php';
 
-class Home extends CI_Controller
+class Home extends BaseController
 {
 
 	public function __construct(array $params = array())
@@ -12,7 +13,6 @@ class Home extends CI_Controller
 
         $this->language = $this->uri->segment(1);
     
-            $this->language = 'es';
         
 
         $this->colour_mode = isset($this->session->colour_mode) ? $this->session->colour_mode : 'light';
@@ -23,6 +23,7 @@ class Home extends CI_Controller
             'colour_mode' => $this->colour_mode,
         );
     }
+    
 	public function index()
 	{
 		$this->view_data["views"] = array("panel/home");
