@@ -10,7 +10,7 @@
                 <li class="menu-title" key="t-menu"><?= lang('Menu') ?></li>
 
                 <li>
-                    <a href="<?= APP_URL . $language ?>" class="waves-effect">
+                    <a href="<?= APP_URL ?>" class="waves-effect">
                         <i class="bx bx-home-circle"></i>
                         <span><?= lang('Dashboard') ?></span>
                     </a>

@@ -20,7 +20,7 @@
                         <div class="form-group col-12 col-md-6">
                             <label>Product name</label>
                             <input type="text" required class="form-control" value="<?= $product->name ?>" name="name">
-                        </div>
+                        </div>  
                         
                     </div>
                     <br>

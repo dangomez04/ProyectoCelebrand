@@ -2,6 +2,7 @@
 
 use Model\{
     Product,
+    Category,
 };
 
 defined('BASEPATH') or exit('No direct script access allowed');
@@ -47,6 +48,8 @@ class Products extends CI_Controller
       
         $this->view_data["views"] = array("products/create");
         
+        $categories = Category::get_categories();
+        $this->view_data["categories"] = $categories;
 
 		$this->load->view('template', $this->view_data);
 
@@ -56,29 +59,75 @@ class Products extends CI_Controller
 
 
     public function create(){
+        $name = $this->input->post('name');
+        $description = $this->input->post('description');
+        $price = $this->input->post('price');
+        $id_category = $this->input->post('id_category');
+        
+        $data = array(
+            'name' => $name,
+            'description' => $description,
+            'price' => $price,
+            'id_category' => $id_category
+        );    
+        Product::create_products($data);
+        redirect("products");
 
-     
+
     }
 
 
 
     
-    public function delete(){
-     
+    public function delete($id_product){
+
+            $product = new Product();
+            $product->delete_product(['id_product' => $id_product]);
+            redirect("products");
+
+
     }
 
 
-    public function edit(){
+    public function edit($id_product){
        
+        $this->view_data["views"] = array("products/edit");
+        
+        
+
+        $product = Product::search_product(['id_product' => $id_product]);
+        $this->view_data["product"] = $product;
+        
+        $categories = Category::get_categories();
+        $this->view_data["categories"] = $categories;
 
 
 
+
+		$this->load->view('template', $this->view_data);
 
     }
 
     
     public function update(){
-       
+
+        $name = $this->input->post('name');
+        $id_category = $this->input->post('id_category');
+        $price = $this->input->post('price');
+        $description = $this->input->post('description');
+        $id_product = $this->input->post('id_product');
+
+        $data = array(
+            'name' => $name,
+            'id_category' => $id_category,
+            'price' => $price,
+            'description' => $description,
+            'id_product' => $id_product
+        );
+
+        $product =  Product::update_product($data);
+        redirect("products");
+        
     }
 
 
