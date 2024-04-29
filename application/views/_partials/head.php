@@ -11,7 +11,6 @@
 
     <?php $this->load->view('_partials/head-css') ?>
 
-
 </head>
 
 <body data-sidebar="dark" data-sidebar-size="small">

@@ -14,5 +14,9 @@
 <?php endif; ?>
 <!-- Revi Css-->
 <link href="<?= APP_URL ?>assets/css/revi.css" id="revi-style" rel="stylesheet" type="text/css" />
+
+<!-- Custom Css-->
+<link href="<?= APP_URL ?>assets/css/custom.css" id="custom-style" rel="stylesheet" type="text/css" />
+
 <!-- TOASTR CSS-->
 <link href="<?= APP_URL ?>assets/libs/toastr/toastr.min.css" id="toastr-style" rel="stylesheet" type="text/css">

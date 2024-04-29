@@ -29,4 +29,9 @@ class Home extends BaseController
 		$this->view_data["views"] = array("panel/home");
 		$this->load->view('template', $this->view_data);
 	}
+
+
+
+
+    
 }
